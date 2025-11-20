@@ -1,0 +1,10 @@
+app:
+  rate-limit:
+    max-attempts: 5
+    window-minutes: 15
+    otp:
+      max-attempts: 3
+      window-minutes: 5
+    login:
+      max-attempts: 5
+      window-minutes: 30

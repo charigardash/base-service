@@ -5,10 +5,12 @@ import io.github.bucket4j.Bucket;
 import io.github.bucket4j.Bucket4j;
 import io.github.bucket4j.Refill;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Service;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+@Service
 public class RateLimitingService {
 
     private final RedisTemplate<String, Object> redisTemplate;
