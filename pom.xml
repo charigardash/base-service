@@ -44,34 +44,33 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>-->
+<!--        </dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
-        <!-- Bucket4j for Redis -->
-        <dependency>
-            <groupId>com.bucket4j</groupId>
-            <artifactId>bucket4j-redis</artifactId>
-            <version>8.1.0</version>
-        </dependency>
-
-        <!-- Lettuce for Redis connection pooling -->
-        <dependency>
-            <groupId>io.lettuce</groupId>
-            <artifactId>lettuce-core</artifactId>
-        </dependency>
-        <!-- Jedis Redis client -->
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-        </dependency>
 
         <!-- Bucket4j for rate limiting -->
+        <dependency>
+            <groupId>com.bucket4j</groupId>
+            <artifactId>bucket4j_jdk17-core</artifactId>
+            <version>8.15.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bucket4j</groupId>
+            <artifactId>bucket4j_jdk17-lettuce</artifactId>
+            <version>8.15.0</version>
+        </dependency>
         <dependency>
             <groupId>com.bucket4j</groupId>
             <artifactId>bucket4j-core</artifactId>
             <version>8.1.0</version>
         </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -79,7 +78,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
         </dependency>
         <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
         <dependency>
@@ -111,6 +109,10 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</path>
 						<path>
 							<groupId>org.springframework.boot</groupId>
 							<artifactId>spring-boot-configuration-processor</artifactId>
